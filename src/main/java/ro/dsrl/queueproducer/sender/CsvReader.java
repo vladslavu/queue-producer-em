@@ -27,11 +27,9 @@ public class CsvReader {
                     .stream()
                     .map(arrayOfStrings -> Float.parseFloat(arrayOfStrings[0]))
                     .collect(Collectors.toList());
-        }
-        catch (IOException exception) {
+        } catch (IOException exception) {
             log.error(exception.getMessage());
-        }
-        catch (CsvException csvException) {
+        } catch (CsvException csvException) {
             log.error("There was an error while reading from CSV file.");
         }
         return null;

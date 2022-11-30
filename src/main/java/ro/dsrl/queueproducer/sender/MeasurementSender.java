@@ -35,8 +35,8 @@ public class MeasurementSender {
 
     @Scheduled(initialDelay = 10000L, fixedDelay = 30000L)
     public void send() {
-        final var message = new Message(new Timestamp(System.currentTimeMillis()), getDeviceId(),
-                measurementsWrapper.getNextMeasurement());
+        final var message = new Message(new Timestamp(System.currentTimeMillis()),
+                measurementsWrapper.getNextMeasurement(), getDeviceId());
         log.info("Sending message: " + message);
         measurementSenderService.send(message);
     }
