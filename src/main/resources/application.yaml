@@ -1,2 +1,18 @@
 server:
   port: 8081
+
+spring:
+  rabbitmq:
+    host: goose-01.rmq2.cloudamqp.com
+    virtual-host: rdhazhbe
+    port: 5672
+    username: rdhazhbe
+    password: ErygMEy3R-_KZKVWRV1nA_TY0wKTKCJA
+
+queue:
+  name: measurements-queue
+
+energy:
+  management:
+    device-ids: 74c27f18-d18d-4c87-902a-444c40cabf76,7d48f23b-849e-4276-95e4-75e487a2a760,86ef28ce-6436-4933-9f73-d8b12fc4e570
+    csv-file-path: sensor.csv
